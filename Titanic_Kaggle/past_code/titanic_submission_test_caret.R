@@ -22,7 +22,7 @@ full = rbind(train, test)
 factor_vars = c('Pclass','Sex','Embarked')
 full[factor_vars] = lapply(full[factor_vars], function(x) as.factor(x))
 
-# Factorize Survived
+# Factorize Survived 
 
 full = full %>%
   mutate(Survived = ifelse(Survived == 1, "yes", "no"))
